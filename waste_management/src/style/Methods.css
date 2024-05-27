@@ -1,0 +1,9 @@
+/* Methods.css */
+.methods {
+    padding: 20px;
+    background-color: #ffffff; /* Ensure background is white */
+}
+
+.methods h1, .methods p {
+    color: #000000; /* Ensure text color is black */
+}

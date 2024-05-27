@@ -1,0 +1,11 @@
+/* MainWindow.css */
+.main-window {
+    overflow-y: auto;
+    min-height: calc(100vh - 50px); /* Ensure it takes the full height of the screen minus the navbar */
+    background-color: #f8f9fa; /* Light background color for contrast */
+    padding: 0px; /* Space for footer */
+    height: 100vh;
+    width: 100vw; /* Ensure it takes the full width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}

@@ -1,0 +1,30 @@
+/* BackgroundInformation.css */
+.background-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    padding-top: 100px;
+    padding-bottom: 30px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.essay-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 40px 0; /* Add margin to the top and bottom */
+}
+
+.essay-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.essay-container p {
+    text-align: justify;
+}
