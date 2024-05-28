@@ -1,6 +1,6 @@
-// NavBar.js
 import React from 'react';
 import './style/NavBar.css';
+import Home from './Home';
 import BackgroundInformation from './BackgroundInformation';
 import Methods from './Methods';
 import Relevance from './Relevance';
@@ -8,11 +8,18 @@ import MunicipalSolidWaste from './MunicipalSolidWaste';
 import Recycling from './Recycling';
 import MedicalWaste from './MedicalWaste';
 import HazardousWaste from './HazardousWaste';
+import UCSDLogo from './UCSD-Symbol.png'; // Import your logo
 
 const NavBar = ({ onContentChange }) => {
     return (
         <nav className="navbar">
+            <div className="navbar-logo">
+                <img src={UCSDLogo} alt="UCSD Logo" className="navbar-logo-img" />
+            </div>
             <ul className="navbar-menu">
+                <li className="navbar-item" onClick={() => onContentChange(<Home />)}>
+                    Home
+                </li>
                 <li className="navbar-item" onClick={() => onContentChange(<BackgroundInformation />)}>
                     Background Information
                 </li>

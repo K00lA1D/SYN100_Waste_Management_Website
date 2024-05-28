@@ -1,0 +1,23 @@
+/* HazardousWaste.css */
+.hazardous-waste-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hazardous-waste-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}

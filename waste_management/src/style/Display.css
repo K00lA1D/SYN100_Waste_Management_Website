@@ -1,0 +1,10 @@
+/* Display.css */
+.Display {
+    width: 100%;
+    height: calc(100vh - 70px); /* Adjust height to account for navbar */
+    padding-top: 2rem; /* Add padding to the top */
+    padding-bottom: 2rem; /* Add padding to the bottom */
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
