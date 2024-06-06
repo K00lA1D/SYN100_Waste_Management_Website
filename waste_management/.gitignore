@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+/src/pharm.mp4
+/src/medical.mp4
+/src/*.mp4
 # testing
 /coverage
 

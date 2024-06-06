@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Line } from 'react-chartjs-2';
+import recycling from './recycling.mp4';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -102,10 +103,16 @@ const Recycling = () => {
     }, []);
 
     return (
-        <div className="recycling-container">
-            <h2 className="recycling-title">Recycling Content</h2>
-            <div className="chart-container">
-                <Line ref={chartRef} data={data} options={options} />
+        <div className="recycling">
+            <video src={recycling} autoPlay loop muted />
+            <div className="recycling-container">
+                <h2 className="recycling-title">Recycling Content</h2>
+                <div className="chart-container">
+                    <Line ref={chartRef} data={data} options={options} />
+                </div>
+                <p className="recycling-text">
+                    This graph portrays the amount of recycling by mass (tons) per quarter for the calendar years of 2020-2023. UCSDH had almost twice the amount of recycling in 2020 which seemed to drastically decrease in 2021. From then on, the amount of recycling has decreased per year.
+                </p>
             </div>
         </div>
     );

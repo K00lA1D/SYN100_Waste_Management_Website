@@ -1,5 +1,5 @@
-/* HazardousWaste.css */
-.hazardous-waste-container {
+/* MedicalWaste.css */
+.pharmaceutical-waste-container {
     position: relative;
     top: 80px;
     max-width: 800px;
@@ -12,6 +12,7 @@
     z-index: 1;
 }
 
+
 video {
     position: fixed;
     top: 0;
@@ -22,7 +23,7 @@ video {
     z-index: 0; /* Ensure the video is in the background */
 }
 
-.hazardous-waste-title {
+.pharmaceutical-waste-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-family: 'Arial', sans-serif;
@@ -33,12 +34,14 @@ video {
     position: relative;
     height: 400px;
     width: 100%;
+    margin-top: 2rem; /* Added margin for spacing between charts */
 }
 
-.hazardous-waste-text {
+.pharmaceutical-waste-text {
     font-size: 1rem;
     margin-top: 1rem;
     font-family: 'Arial', sans-serif;
     color: #333;
     text-align: left;
 }
+

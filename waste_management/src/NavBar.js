@@ -8,13 +8,14 @@ import MunicipalSolidWaste from './MunicipalSolidWaste';
 import Recycling from './Recycling';
 import MedicalWaste from './MedicalWaste';
 import HazardousWaste from './HazardousWaste';
-import UCSDLogo from './UCSD-Symbol.png'; // Import your logo
+import PharmaceuticalWaste from './PharmaceuticalWaste';
+import SYNbol from './SYNbol.png'; // Import your logo
 
 const NavBar = ({ onContentChange }) => {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <img src={UCSDLogo} alt="UCSD Logo" className="navbar-logo-img" />
+                <img src={SYNbol} alt="UCSD Logo" className="navbar-logo-img" />
             </div>
             <ul className="navbar-menu">
                 <li className="navbar-item" onClick={() => onContentChange(<Home />)}>
@@ -33,6 +34,7 @@ const NavBar = ({ onContentChange }) => {
                         <li className="dropdown-item" onClick={() => onContentChange(<Recycling />)}>Recycling</li>
                         <li className="dropdown-item" onClick={() => onContentChange(<MedicalWaste />)}>Medical Waste</li>
                         <li className="dropdown-item" onClick={() => onContentChange(<HazardousWaste />)}>Hazardous Waste</li>
+                        <li className="dropdown-item" onClick={() => onContentChange(<PharmaceuticalWaste />)}>Pharmaceutical Waste</li>
                     </ul>
                 </li>
                 <li className="navbar-item" onClick={() => onContentChange(<Relevance />)}>

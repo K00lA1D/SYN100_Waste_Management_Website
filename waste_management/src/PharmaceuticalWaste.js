@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Line } from 'react-chartjs-2';
-import medical from './medical.mp4';
+import pharm from './pharm.mp4';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -11,7 +11,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import './style/MunicipalSolidWaste.css';
+import './style/PharmaceuticalWaste.css';
 
 // Register the required components
 ChartJS.register(
@@ -24,45 +24,33 @@ ChartJS.register(
   Legend
 );
 
-const MunicipalSolidWaste = () => {
+const PharmaceuticalWaste = () => {
     const chartRef = useRef(null);
 
-    const data = {
-        labels: ['QTR 1', 'QTR 2', 'QTR 3', 'QTR 4'],
+    const newData = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [
             {
-                label: 'CY2020',
-                data: [907, 766, 833, 749],
-                borderColor: 'blue',
+                label: 'Hillcrest Medical Center',
+                data: [2820, 2540, 2660, 2180, 2600, 4000, 3100, 2580, 2660, 3540, 2460, 3300],
+                borderColor: 'purple',
                 fill: false,
             },
             {
-                label: 'CY2021',
-                data: [897, 778, 939, 915],
-                borderColor: 'green',
-                fill: false,
-            },
-            {
-                label: 'CY2022',
-                data: [897, 931, 959, 976],
-                borderColor: 'orange',
-                fill: false,
-            },
-            {
-                label: 'CY2023',
-                data: [909, 1107, 909, 915],
-                borderColor: 'red',
+                label: 'La Jolla Jacobs Medical Center',
+                data: [6779, 6499, 7299, 6039, 8119, 7759, 6999, 8059, 7519, 8079, 7459, 8380],
+                borderColor: 'brown',
                 fill: false,
             },
         ],
     };
 
-    const options = {
+    const newOptions = {
         responsive: true,
         plugins: {
             title: {
                 display: true,
-                text: 'Municipal Solid Waste Over Quarters',
+                text: 'Regulated Pharmaceutical Waste (lbs) Over Months',
             },
             tooltip: {
                 mode: 'index',
@@ -81,14 +69,14 @@ const MunicipalSolidWaste = () => {
                 display: true,
                 title: {
                     display: true,
-                    text: 'Quarter',
+                    text: 'Month',
                 },
             },
             y: {
                 display: true,
                 title: {
                     display: true,
-                    text: 'Mass (tons)',
+                    text: 'Pharm (lbs)',
                 },
             },
         },
@@ -103,14 +91,14 @@ const MunicipalSolidWaste = () => {
     }, []);
 
     return (
-        <div className="municipal">
-            <video src={medical} autoPlay loop muted />
-            <div className="municipal-solid-waste-container">
-                <h2 className="municipal-solid-waste-title">Municipal Solid Waste Content</h2>
+        <div className="pharmaceutical-waste">
+            <video src={pharm} autoPlay loop muted />
+            <div className="pharmaceutical-waste-container">
+                <h2 className="pharmaceutical-waste-title">Pharmaceutical Waste Content</h2>
                 <div className="chart-container">
-                    <Line ref={chartRef} data={data} options={options} />
+                    <Line ref={chartRef} data={newData} options={newOptions} />
                 </div>
-                <p className="municipal-solid-waste-text">
+                <p className="pharmaceutical-waste-text">
                     This graph represents the mass in tons of municipal solid waste produced from UCSDH facilities per quarter for the calendar years of 2020-2023. As seen, 2023 had a large spike by quarter 2. Also, the mass produced seems to increase every calendar year.
                 </p>
             </div>
@@ -118,4 +106,4 @@ const MunicipalSolidWaste = () => {
     );
 };
 
-export default MunicipalSolidWaste;
+export default PharmaceuticalWaste;

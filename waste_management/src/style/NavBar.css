@@ -1,85 +1,83 @@
-/* NavBar.css */
-@import url('https://fonts.googleapis.com/css2?family=Arial:wght@700&display=swap'); /* Importing Arial Bold */
-@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap'); /* Importing Arial Regular */
+
 
 .navbar {
-    background-color: #ffffff; /* white background */
-    padding: 0 1rem; /* padding for some space on left and right */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 2px -2px gray; /* subtle shadow for separation */
-    display: flex;
-    align-items: center; /* center items vertically */
-    justify-content: space-between; /* space between logo and menu */
-    height: 70px; /* fixed height to ensure proper layout */
-    font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 2px -2px gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  font-family: 'Arial', sans-serif;
 }
 
 .navbar-logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-logo-img {
-    height: 30px; /* increase based on desired logo size */
-    margin-right: 2rem; /* spacing between logo and menu */
+  height: 70px;
+  margin-right: 2rem;
 }
 
 .navbar-menu {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    height: 100%;
-    align-items: center; /* center text vertically */
-    flex-grow: 1; /* allow menu to take up available space */
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .navbar-item {
-    position: relative;
-    color: #182B49; /* black text */
-    font-size: 1.2rem;
-    padding: 0px 20px 0px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* smooth transition for hover effect */
-    display: flex;
-    align-items: center; /* center text vertically */
-    height: 100%;
-    font-weight: bold;
+  position: relative;
+  color: #182B49;
+  font-size: 1.2rem;
+  padding: 0px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-weight: bold;
 }
 
 .navbar-item:hover {
-    background-color: #182B49; /* dark blue highlight */
-    color: white; /* white text on hover */
+  background-color: #182B49;
+  color: white;
 }
 
 .navbar-item:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
 
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #182B49; /* dark blue background */
-    list-style: none;
-    margin: 0;
-    padding: 0.5rem 0;
-    min-width: 100%;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #182B49;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  min-width: 100%;
 }
 
 .dropdown-item {
-    color: white;
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-    transition: background-color 0.3s ease; /* smooth transition for hover effect */
-    font-weight: normal; /* Regular font for dropdown items */
+  color: white;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  font-weight: normal;
 }
 
 .dropdown-item:hover {
-    background-color: white; /* white background on hover */
-    color: #182B49; /* dark blue text on hover */
+  background-color: white;
+  color: #182B49;
 }

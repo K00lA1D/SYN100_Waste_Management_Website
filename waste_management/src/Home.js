@@ -10,7 +10,7 @@ const Home = () => {
             <video src={HomeMP4} autoPlay loop muted />
             <div className="home-container">
                 <Typical
-                    steps={['SYN 100 - Medical Waste', 5000]}
+                    steps={['UCSD Health - Waste Analysis', 5000]}
                     loop={Infinity}
                     wrapper="h1"
                 />

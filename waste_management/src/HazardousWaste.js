@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Line } from 'react-chartjs-2';
+import industry from './industry.mp4';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -99,10 +100,16 @@ const HazardousWaste = () => {
     }, []);
 
     return (
-        <div className="hazardous-waste-container">
-            <h2 className="hazardous-waste-title">Hazardous Waste Content</h2>
-            <div className="chart-container">
-                <Line ref={chartRef} data={data} options={options} />
+        <div className="hazardous-waste">
+            <video src={industry} autoPlay loop muted />
+            <div className="hazardous-waste-container">
+                <h2 className="hazardous-waste-title">Hazardous Waste Content</h2>
+                <div className="chart-container">
+                    <Line ref={chartRef} data={data} options={options} />
+                </div>
+                <p className="hazardous-waste-text">
+                    This graph represents the cost in dollars to dispose of the hazardous waste produced per quarter of the calendar years of 2021-2023. There was a lack of data for 2021 and 2023. Calendar year 2022 had the least amount of cost for management of hazardous waste produced.
+                </p>
             </div>
         </div>
     );
