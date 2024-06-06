@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import lab_device from './lab_device.mp4';
+import industry from './industry.mp4';
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -159,7 +159,7 @@ const MedicalWaste = () => {
 
     return (
         <div className="medical-waste">
-            <video src={lab_device} autoPlay loop muted />
+            <video src={industry} autoPlay loop muted />
             <div className="medical-waste-container">
                 <h2 className="medical-waste-title">Medical Waste Content</h2>
                 <div className="chart-container">

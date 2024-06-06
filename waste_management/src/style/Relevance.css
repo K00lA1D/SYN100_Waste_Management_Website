@@ -24,7 +24,7 @@ video {
     text-align: center;
     max-width: 800px; /* Slightly smaller width */
     margin: 0 auto; /* Center the container */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for readability */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1; /* Ensure it stays above the video */

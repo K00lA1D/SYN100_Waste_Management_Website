@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Line } from 'react-chartjs-2';
-import medical from './medical.mp4';
+import pharm from './pharm.mp4';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -104,7 +104,7 @@ const MunicipalSolidWaste = () => {
 
     return (
         <div className="municipal">
-            <video src={medical} autoPlay loop muted />
+            <video src={pharm} autoPlay loop muted />
             <div className="municipal-solid-waste-container">
                 <h2 className="municipal-solid-waste-title">Municipal Solid Waste Content</h2>
                 <div className="chart-container">
