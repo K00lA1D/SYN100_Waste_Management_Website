@@ -1,4 +1,4 @@
-// BackgroundInformation.js
+
 import React from 'react';
 import Typical from 'react-typical';
 import lab_device from './lab_device.mp4';

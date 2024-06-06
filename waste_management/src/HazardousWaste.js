@@ -13,7 +13,6 @@ import {
 } from 'chart.js';
 import './style/HazardousWaste.css';
 
-// Register the required components
 ChartJS.register(
   CategoryScale,
   LinearScale,

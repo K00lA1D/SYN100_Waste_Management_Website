@@ -1,12 +1,12 @@
-// BackgroundInformation.js
+
 import React from 'react';
-import Turbines from './turbines.mp4';
+import industry from './industry.mp4';
 import './style/BackgroundInformation.css';
 
 const BackgroundInformation = () => {
     return (
         <div className="background-information">
-            <video src={Turbines} autoPlay loop muted />
+            <video src={industry} autoPlay loop muted />
             <div className="background-container">
                 <h2>Understanding Waste and Its Impact</h2>
                 <p>

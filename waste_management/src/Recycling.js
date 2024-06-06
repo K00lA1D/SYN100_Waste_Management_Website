@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Line } from 'react-chartjs-2';
-import recycling from './recycling.mp4';
+import lab_device from './lab_device.mp4';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -13,7 +13,7 @@ import {
 } from 'chart.js';
 import './style/Recycling.css';
 
-// Register the required components
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -104,7 +104,7 @@ const Recycling = () => {
 
     return (
         <div className="recycling">
-            <video src={recycling} autoPlay loop muted />
+            <video src={lab_device} autoPlay loop muted />
             <div className="recycling-container">
                 <h2 className="recycling-title">Recycling Content</h2>
                 <div className="chart-container">

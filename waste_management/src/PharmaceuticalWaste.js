@@ -13,7 +13,6 @@ import {
 } from 'chart.js';
 import './style/PharmaceuticalWaste.css';
 
-// Register the required components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -99,7 +98,7 @@ const PharmaceuticalWaste = () => {
                     <Line ref={chartRef} data={newData} options={newOptions} />
                 </div>
                 <p className="pharmaceutical-waste-text">
-                    This graph represents the mass in tons of municipal solid waste produced from UCSDH facilities per quarter for the calendar years of 2020-2023. As seen, 2023 had a large spike by quarter 2. Also, the mass produced seems to increase every calendar year.
+                    This graph shows the regulated pharmaceutical waste (in lbs) generated monthly by Hillcrest Medical Center and La Jolla Jacobs Medical Center. Hillcrest consistently produced less waste compared to La Jolla Jacobs, with both centers experiencing variability throughout the year. Peaks in waste generation are observed in specific months for each center.
                 </p>
             </div>
         </div>

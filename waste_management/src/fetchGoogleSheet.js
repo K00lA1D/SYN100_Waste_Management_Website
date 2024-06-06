@@ -6,7 +6,7 @@ export const fetchGoogleSheet = async (spreadsheetId, range, apiKey) => {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data); // Log the data for debugging
+        console.log(data); 
         if (!data.values) {
             throw new Error('No values in response');
         }

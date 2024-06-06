@@ -9,7 +9,7 @@ import Recycling from './Recycling';
 import MedicalWaste from './MedicalWaste';
 import HazardousWaste from './HazardousWaste';
 import PharmaceuticalWaste from './PharmaceuticalWaste';
-import SYNbol from './SYNbol.png'; // Import your logo
+import SYNbol from './SYNbol.png';
 
 const NavBar = ({ onContentChange }) => {
     return (

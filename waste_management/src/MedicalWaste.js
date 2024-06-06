@@ -13,7 +13,6 @@ import {
 } from 'chart.js';
 import './style/MedicalWaste.css';
 
-// Register the required components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -172,7 +171,7 @@ const MedicalWaste = () => {
                     <Line ref={chartRef} data={newData} options={newOptions} />
                 </div>
                 <p className="medical-waste-text">
-                    This graph represents the cost in dollars to dispose of the hazardous waste produced per quarter of the calendar years of 2021-2023. There was a lack of data for 2021 and 2023. Calendar year 2022 had the least amount of cost for management of hazardous waste produced.
+                    This graph shows the regulated medical waste (RMW) in pounds produced by Hillcrest Medical Center and La Jolla Jacobs Medical Center over the months of January to December. Hillcrest Medical Center shows a relatively stable trend, while La Jolla Jacobs Medical Center has significant fluctuations, peaking in March and maintaining higher levels overall.
                 </p>
             </div>
         </div>
