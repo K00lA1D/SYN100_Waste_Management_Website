@@ -116,7 +116,7 @@ const MedicalWaste = () => {
         plugins: {
             title: {
                 display: true,
-                text: 'Regulated Medical Waste (lbs) Over Months',
+                text: 'Regulated Medical Waste (lbs) Over Months of 2023',
             },
             tooltip: {
                 mode: 'index',
@@ -171,7 +171,7 @@ const MedicalWaste = () => {
                     <Line ref={chartRef} data={newData} options={newOptions} />
                 </div>
                 <p className="medical-waste-text">
-                    This graph shows the regulated medical waste (RMW) in pounds produced by Hillcrest Medical Center and La Jolla Jacobs Medical Center over the months of January to December. Hillcrest Medical Center shows a relatively stable trend, while La Jolla Jacobs Medical Center has significant fluctuations, peaking in March and maintaining higher levels overall.
+                    This graph shows the regulated medical waste (RMW) in pounds produced by Hillcrest Medical Center and La Jolla Jacobs Medical Center over the months of January to December of 2023. Hillcrest Medical Center shows a relatively stable trend, while La Jolla Jacobs Medical Center has significant fluctuations, peaking in March and maintaining higher levels overall.
                 </p>
             </div>
         </div>

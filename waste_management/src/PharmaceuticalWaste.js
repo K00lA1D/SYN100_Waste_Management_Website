@@ -49,7 +49,7 @@ const PharmaceuticalWaste = () => {
         plugins: {
             title: {
                 display: true,
-                text: 'Regulated Pharmaceutical Waste (lbs) Over Months',
+                text: 'Regulated Pharmaceutical Waste (lbs) Over Months of 2023',
             },
             tooltip: {
                 mode: 'index',
@@ -98,7 +98,7 @@ const PharmaceuticalWaste = () => {
                     <Line ref={chartRef} data={newData} options={newOptions} />
                 </div>
                 <p className="pharmaceutical-waste-text">
-                    This graph shows the regulated pharmaceutical waste (in lbs) generated monthly by Hillcrest Medical Center and La Jolla Jacobs Medical Center. Hillcrest consistently produced less waste compared to La Jolla Jacobs, with both centers experiencing variability throughout the year. Peaks in waste generation are observed in specific months for each center.
+                    This graph shows the regulated pharmaceutical waste (in lbs) generated monthly by Hillcrest Medical Center and La Jolla Jacobs Medical Center across the months of 2023. Hillcrest consistently produced less waste compared to La Jolla Jacobs, with both centers experiencing variability throughout the year. Peaks in waste generation are observed in specific months for each center.
                 </p>
             </div>
         </div>
