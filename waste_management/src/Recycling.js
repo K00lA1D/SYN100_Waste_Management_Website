@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import lab_device from './lab_device.mp4';
 import {
@@ -12,7 +12,7 @@ import {
   Legend,
 } from 'chart.js';
 import './style/Recycling.css';
-
+import PasswordModal from './PasswordModal';
 
 ChartJS.register(
   CategoryScale,
@@ -26,6 +26,7 @@ ChartJS.register(
 
 const Recycling = () => {
     const chartRef = useRef(null);
+    const [isPasswordCorrect, setIsPasswordCorrect] = useState(false);
 
     const data = {
         labels: ['QTR 1', 'QTR 2', 'QTR 3', 'QTR 4'],
@@ -102,10 +103,15 @@ const Recycling = () => {
         };
     }, []);
 
+    const handlePasswordCorrect = () => {
+        setIsPasswordCorrect(true);
+    };
+
     return (
         <div className="recycling">
             <video src={lab_device} autoPlay loop muted />
-            <div className="recycling-container">
+            {!isPasswordCorrect && <PasswordModal onPasswordCorrect={handlePasswordCorrect} />}
+            <div className={`recycling-container ${!isPasswordCorrect ? 'blurred' : ''}`}>
                 <h2 className="recycling-title">Recycling Content</h2>
                 <div className="chart-container">
                     <Line ref={chartRef} data={data} options={options} />

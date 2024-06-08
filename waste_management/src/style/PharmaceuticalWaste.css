@@ -45,3 +45,8 @@ video {
     text-align: left;
 }
 
+
+.blurred {
+    filter: blur(10px);
+}
+

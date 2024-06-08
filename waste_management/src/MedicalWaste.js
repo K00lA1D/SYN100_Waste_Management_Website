@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import industry from './industry.mp4';
 import { Line } from 'react-chartjs-2';
 import {
@@ -12,6 +12,7 @@ import {
   Legend,
 } from 'chart.js';
 import './style/MedicalWaste.css';
+import PasswordModal from './PasswordModal';
 
 ChartJS.register(
   CategoryScale,
@@ -25,6 +26,7 @@ ChartJS.register(
 
 const MedicalWaste = () => {
     const chartRef = useRef(null);
+    const [isPasswordCorrect, setIsPasswordCorrect] = useState(false);
 
     const data = {
         labels: ['QTR 1', 'QTR 2', 'QTR 3', 'QTR 4'],
@@ -156,10 +158,15 @@ const MedicalWaste = () => {
         };
     }, []);
 
+    const handlePasswordCorrect = () => {
+        setIsPasswordCorrect(true);
+    };
+
     return (
         <div className="medical-waste">
             <video src={industry} autoPlay loop muted />
-            <div className="medical-waste-container">
+            {!isPasswordCorrect && <PasswordModal onPasswordCorrect={handlePasswordCorrect} />}
+            <div className={`medical-waste-container ${!isPasswordCorrect ? 'blurred' : ''}`}>
                 <h2 className="medical-waste-title">Medical Waste Content</h2>
                 <div className="chart-container">
                     <Line ref={chartRef} data={data} options={options} />

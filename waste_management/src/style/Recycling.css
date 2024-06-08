@@ -42,3 +42,8 @@ video {
     color: #333;
     text-align: left;
 }
+
+.blurred {
+    filter: blur(10px);
+}
+

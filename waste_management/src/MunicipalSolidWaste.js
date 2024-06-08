@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import pharm from './pharm.mp4';
 import {
@@ -12,6 +12,7 @@ import {
   Legend,
 } from 'chart.js';
 import './style/MunicipalSolidWaste.css';
+import PasswordModal from './PasswordModal';
 
 // Register the required components
 ChartJS.register(
@@ -26,6 +27,7 @@ ChartJS.register(
 
 const MunicipalSolidWaste = () => {
     const chartRef = useRef(null);
+    const [isPasswordCorrect, setIsPasswordCorrect] = useState(false);
 
     const data = {
         labels: ['QTR 1', 'QTR 2', 'QTR 3', 'QTR 4'],
@@ -102,10 +104,15 @@ const MunicipalSolidWaste = () => {
         };
     }, []);
 
+    const handlePasswordCorrect = () => {
+        setIsPasswordCorrect(true);
+    };
+
     return (
         <div className="municipal">
             <video src={pharm} autoPlay loop muted />
-            <div className="municipal-solid-waste-container">
+            {!isPasswordCorrect && <PasswordModal onPasswordCorrect={handlePasswordCorrect} />}
+            <div className={`municipal-solid-waste-container ${!isPasswordCorrect ? 'blurred' : ''}`}>
                 <h2 className="municipal-solid-waste-title">Municipal Solid Waste Content</h2>
                 <div className="chart-container">
                     <Line ref={chartRef} data={data} options={options} />
